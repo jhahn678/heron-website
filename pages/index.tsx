@@ -84,7 +84,7 @@ const Home: NextPage = () => {
 
       <header className={styles.header}>
         <div className='frac'>
-          <Image src={'/heron-logo-simple.svg'} height={100} width={100}/>
+          <Image src={'/heron-logo-simple.svg'} alt={'Heron logo'} height={100} width={100}/>
           <Title order={1}>Heron</Title>
         </div>
         <motion.a 
@@ -125,14 +125,18 @@ const Home: NextPage = () => {
             size={widthSmallerThan700 ? 20 : 36}
           >Download the Heron app today.</Title> 
           <div className={styles.appStoreIcons}>
-            <Image src={AppStore} width={150} height={100}/>
+            <Image src={AppStore} width={150} height={100} alt={'Download on Apple App Store'}/>
             <div style={{ width: 24 }}/>
-            <Image src={PlayStore} width={150} height={100}/>
+            <Image src={PlayStore} width={150} height={100} alt={'Download on Google Play Store'}/>
           </div>
         </div>
         { widthLargerThan1200 &&
           <div className={styles.sectionOneRight}>
-            <Image src={'https://heron-static.s3.amazonaws.com/phones.png'} objectFit='contain' height={1000} width={900}/>
+            <Image 
+              src={'https://heron-static.s3.amazonaws.com/phones.png'} 
+              alt={'Example app screens'}
+              objectFit='contain' height={1000} width={900}
+            />
           </div>
         }
         <div className={styles.sectionOneBottom}>
@@ -147,7 +151,7 @@ const Home: NextPage = () => {
 
         { widthLargerThan1200 &&
            <div className={styles.waveCont}>
-            <Image src={Wave} className={styles.wave}/>
+            <Image src={Wave} className={styles.wave} alt={'wave pattern'}/>
           </div>
         }
 
@@ -173,8 +177,16 @@ const Home: NextPage = () => {
         </div>
         <div className={styles.sectionTwoRow}>
           <div className={styles.sectionTwoColLeft}>
-            <Image src={'https://heron-static.s3.amazonaws.com/phone-waterbody-main.png'} objectFit='contain' height={450} width={250}/>
-            <Image src={'https://heron-static.s3.amazonaws.com/phone-waterbody-review.png'} objectFit='contain' height={450} width={250}/>
+            <Image 
+              src={'https://heron-static.s3.amazonaws.com/phone-waterbody-main.png'} 
+              objectFit='contain' height={450} width={250}
+              alt={'Example waterbody screen'}
+            />
+            <Image 
+              src={'https://heron-static.s3.amazonaws.com/phone-waterbody-review.png'} 
+              objectFit='contain' height={450} width={250}
+              alt={'Example waterbody review'}
+            />
           </div>
           <div className={styles.sectionTwoCol}>
             <Title 
@@ -213,27 +225,48 @@ const Home: NextPage = () => {
           body={''}
           className={styles.imageCard}
           icon={<IoCreateOutline size={20}/>}
-          image={<Image src={'https://heron-static.s3.amazonaws.com/phone-new-catch.png'} height={350} width={350} objectFit='contain'/>}
+          image={
+            <Image 
+              src={'https://heron-static.s3.amazonaws.com/phone-new-catch.png'} 
+              height={350} width={350} objectFit='contain' 
+              alt={'Example new catch screen'}
+            />
+          }
         />
         <ImageCard
           title={'Track your statistics'}
           body={''}
           className={styles.imageCard}
           icon={<IoStatsChartOutline size={20}/>}
-          image={<Image src={'https://heron-static.s3.amazonaws.com/phone-catch-stats.png'} height={350} width={350} objectFit='contain'/>}
+          image={
+            <Image 
+              src={'https://heron-static.s3.amazonaws.com/phone-catch-stats.png'} 
+              height={350} width={350} objectFit='contain' 
+              alt={'Example statistics screen'}
+            />
+          }
         />
         <ImageCard
           title={'Share them with friends'}
           body={''}
           icon={<IoShareSocialOutline size={20}/>}
           className={styles.imageCard}
-          image={<Image src={'https://heron-static.s3.amazonaws.com/Phone-catch.png'} height={350} width={350} objectFit='contain'/>}
+          image={
+            <Image 
+              src={'https://heron-static.s3.amazonaws.com/Phone-catch.png'} 
+              height={350} width={350} objectFit='contain'
+              alt={'Example view catch screen'}
+            />
+          }
         />
       </section>
 
       <section className={styles.sectionFour}>
         <Card className={styles.mapCard} shadow="lg" p="xl" radius="md" withBorder>
-          <Image src={'https://heron-static.s3.amazonaws.com/susquehanna-mapbox.png'} layout='fill'/>
+          <Image 
+            src={'https://heron-static.s3.amazonaws.com/susquehanna-mapbox.png'} 
+            layout='fill' alt={'Image of susquehanna river on map'}
+          />
         </Card>
         <div className={styles.sectionFourRight}>
           <Title 
@@ -295,7 +328,7 @@ const Home: NextPage = () => {
 
       <section className={styles.contactSection}>
         <div className={styles.contactSectionLeft}>
-          <img src={'/blob.svg'} className={styles.blob}/>
+          <img src={'/blob.svg'} className={styles.blob} alt={'blob pattern'}/>
           <Title 
             order={1} 
             mt={48} 
@@ -353,7 +386,10 @@ const Home: NextPage = () => {
       <footer className={styles.footer}>
         <div className={styles.footerLogoGroup}>
           <Card className={styles.logoCard} shadow='xl' radius={24}>
-            <Image src={'https://heron-static.s3.amazonaws.com/heron-logo.png'} layout='fill'/>
+            <Image 
+              src={'https://heron-static.s3.amazonaws.com/heron-logo.png'} 
+              layout='fill' alt={'Heron mobile logo'}
+            />
           </Card>
           <Stack ml={16}>
             <Title order={widthSmallerThan700 ? 3 : 2}>Heron Mobile</Title>
@@ -372,8 +408,8 @@ const Home: NextPage = () => {
             </Group>
           </motion.a>
           <Group>
-              <Image src={AppStore} height={54} width={86}/>
-              <Image src={PlayStore} height={54} width={98}/>
+              <Image src={AppStore} height={54} width={86} alt={'Download on Apple App Store'}/>
+              <Image src={PlayStore} height={54} width={98} alt={'Download on Google Play Store'}/>
             </Group>
         </div>
       </footer>
