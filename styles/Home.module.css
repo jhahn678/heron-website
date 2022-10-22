@@ -1,21 +1,348 @@
 .container {
-  height: 100%;
+  height: 100vh;
   width: 100vw;
+  position: relative;
 }
 
 .header {
-  width: 100vw;
   margin-left: 32px;
-  margin-right: 32px;
+  margin-right: 48px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
 }
 
-.group {
+.sectionOne{
   display: flex;
   flex-direction: row;
   align-items: center;
+  width: 100%;
+  height: calc(100vh - 100px);
+  position: relative;
+  z-index: 10;
+}
 
+.sectionOneLeft{
+  flex: 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 10vh;
+  margin-left: 10vw;
+}
+
+.sectionOneRight{
+  flex: 3;
+  padding-bottom: 10vh;
+  margin-right: 5vw;
+}
+
+.waveCont {
+  position: absolute;
+  z-index: 1;
+  bottom: -140vh;
+}
+
+.wave{
+  filter: drop-shadow(0px -2px 4px rgba(0, 0, 0, .3));
+}
+
+.appStoreIcons{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.sectionOneText{
+  max-width: 600px;
+}
+
+.sectionOneBottom {
+  position: absolute;
+  bottom: 32px;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.sectionTwo{
+  position: relative;
+  z-index: 10;
+  width: 100vw;
+  height: 100vh
+}
+
+.sectionTwoTitle{
+  margin-top: 10vh;
+  margin-left: 8vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.sectionTwoRow {
+  display: flex;
+  flex-direction: row;
+  width: 80vw;
+  margin-top: 10vh;
+  margin-left: 6vw;
+}
+
+.sectionTwoCol{
+  flex: 1;
+}
+.sectionTwoColLeft {
+  display: flex;
+  flex-direction: row;
+  width: 40vw;
+  padding-right: 5vw;
+}
+
+.iconCardRow{ 
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 24px;
+}
+
+.iconCardRowText{
+  flex: 1;
+  margin-left: 24px;
+  font-weight: 500;
+}
+
+.sectionThree{
+  position: relative;
+  z-index: 10;
+  width: 100vw;
+  padding: 0 5vw 10vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap ;
+  filter: drop-shadow(0px -1px 4px rgba(0, 0, 0, .1));
+  background: linear-gradient(150deg, rgba(255, 255, 255, 1) 0%, #E5F8FF 100%);
+}
+
+.sectionThreeTitle{
+  padding-top: 64px;
+}
+
+.imageCard{
+  margin-top: 10vh;
+  width: 90vw
+}
+
+.sectionFour{
+  position: relative;
+  z-index: 10;
+  width: 100vw;
+  padding: 10vh 5vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: linear-gradient(20deg, rgba(255, 255, 255, 1) 0%, #E5F8FF 100%);
+}
+
+.sectionFourRight{
+  padding-left: 5vw;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+  flex: 1;
+}
+
+.mapCard{
+  max-width: 550px;
+  width: 90vw;
+  max-height: 550px;
+  height: 90vw;
+}
+
+.mapScreen{
+  position: absolute;
+}
+
+
+.contactSection{
+  height: 110vh;
+  padding: 10vh 5vw;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  background: linear-gradient(150deg, rgba(255, 255, 255, 1) 0%, #E5F8FF 100%);
+}
+
+.contactSectionLeft {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 10;
+  flex: 1;
+}
+.contactSectionRight {
+  align-self: center;
+  width: 40vw;
+  position: relative;
+  z-index: 10;
+}
+
+.form{
+  margin-left: 24px;
+}
+
+.blob{
+  position: absolute;
+  z-index: -1;
+}
+
+.footer{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 48px;
+  width: 100vw;
+  filter: drop-shadow(0px -2px 12px rgba(50, 50, 50, .2));
+  background: linear-gradient(300deg, #C6E5F8 0%,rgba(0,102,139,.5) 100%);
+}
+
+.footerLogoGroup{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.footerLinkGroup{
+  display: flex;
+  flex-direction: column;
+  margin-left: 100px;
+}
+
+.footerGithub{
+  margin-bottom: 16px;
+}
+
+.logoCard{
+  height: 100px;
+  width: 100px;
+  min-width: 100px;
+  min-height: 100px;
+}
+
+
+@media screen and (max-width: 1200px) {
+  .sectionOne{
+    justify-content: center;
+    padding: 32px;
+  }
+  .sectionOneLeft{
+    align-items: center;
+    padding-bottom: 5vh;
+    margin-left: 0;
+  }
+  .sectionTwo {
+    height: unset;
+    padding-top: 5vh;
+    padding-bottom: 10vh;
+    background: linear-gradient(20deg, #C6E5F8 -5.48%, #85BBD4 32.83%, #00668B 87.09%);
+    box-shadow: 0px -6px 20px rgba(0, 0, 0, 0.3);
+  }
+  .sectionTwoTitle {
+    margin-top: 5vh;
+    margin-left: 0;
+    flex-direction: column;
+  }
+  .sectionFour{
+    flex-direction: column;
+  }
+  .sectionFourRight{
+    padding-left: 0;
+  }
+  .contactSection{
+    flex-direction: column;
+    align-items: center;
+    padding: 32px;
+    height: unset;
+  }
+  .contactSectionLeft {
+    margin-bottom: 10vh;
+  }
+  .contactSectionRight {
+    width: 90vw;
+    max-width: 600px;
+  }
+  .form{
+    margin-left: 0;
+  }
+  .footer {
+    justify-content: space-between;
+  }
+  .footerLinkGroup {
+    margin-left: 0px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .sectionTwoRow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    margin-top: 5vh;
+    margin-left: unset;
+  }
+  .sectionTwoCol {
+    padding: 10vh 5vw 0 5vw;
+  }
+  .sectionTwoColLeft {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 90vw;
+    padding-right: 0;
+    height:350px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .sectionThree {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer {
+    padding: 48px 24px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .footerLinkGroup {
+    margin-top: 48px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .footerGithub {
+    margin-right: 24px;
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .sectionOne {
+    justify-content: center;
+    padding: 32px 16px;
+  }
+  .sectionOneLeft {
+    align-items: center;
+    margin-bottom: 10vh;
+  }
+  .sectionFour{
+    padding: 5vh 5vw;
+  }
+  .iconCardRowText{
+    font-size: 14px;
+    
+  }
 }
