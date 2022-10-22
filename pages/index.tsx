@@ -276,12 +276,13 @@ const Home: NextPage = () => {
             align={widthSmallerThan700 ? 'center' : 'left'}
           >Map Your Favorite Spots</Title>
           <div className='frac' style={{ marginTop: 40 }}>
-            <ThemeIcon 
-              children={<GiBoatFishing size={24}/>} 
+            <ThemeIcon  
               size={52} variant="gradient" mr={24}
               ml={widthSmallerThan700 ? 16 : 0}
               gradient={{ to: 'primary', from: 'secondaryContainer.3' }}
-            />
+            >
+              <GiBoatFishing size={24}/>
+            </ThemeIcon>
             <Text weight={500} style={{ flex: 1 }} mr={widthSmallerThan700 ? 16 : 0}>
               Keep track of your most successful locations
             </Text>
