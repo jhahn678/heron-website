@@ -10,9 +10,11 @@ export default class _Document extends Document {
     return (
       <Html>
         <Head>
+          <title>Heron</title>
+          <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
           <link rel="icon" href="/favicon.png" />
         </Head>
-        <body>
+        <body style={{ width: "100%", margin: 0 }}>
           <Main />
           <NextScript />
         </body>
