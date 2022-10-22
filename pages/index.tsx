@@ -254,34 +254,37 @@ const Home: NextPage = () => {
             </Text>
           </div>
           <div className='frac' style={{ marginTop: 24 }}>
-            <ThemeIcon 
-              children={<IoPeople size={24}/>} 
+            <ThemeIcon  
               size={52} variant="gradient" mr={24}
               ml={widthSmallerThan700 ? 16 : 0}
               gradient={{ to: 'primary', from: 'secondaryContainer.3' }}
-            />
+            >
+              <IoPeople size={24}/>
+            </ThemeIcon>
             <Text weight={500} style={{ flex: 1 }} mr={widthSmallerThan700 ? 16 : 0}>
               Share spots with the community and friends
             </Text>
           </div>
           <div className='frac' style={{ marginTop: 24 }}>
-            <ThemeIcon 
-              children={<CgNotes size={24} color={'white'}/>} 
+            <ThemeIcon  
               size={52} variant="gradient" mr={24}
               ml={widthSmallerThan700 ? 16 : 0}
               gradient={{ to: 'primary', from: 'secondaryContainer.3' }}
-            />
+            >
+              <CgNotes size={24} color={'white'}/>
+            </ThemeIcon>
             <Text weight={500} style={{ flex: 1 }} mr={widthSmallerThan700 ? 16 : 0}>
               Read recent reports to help plan your next trip
             </Text>
           </div>
           <div className='frac' style={{ marginTop: 24 }}>
-            <ThemeIcon 
-              children={<IoImages size={24}/>} 
+            <ThemeIcon  
               size={52} variant="gradient" mr={24}
               ml={widthSmallerThan700 ? 16 : 0}
               gradient={{ to: 'primary', from: 'secondaryContainer.3' }}
-            />
+            >
+              <IoImages size={24}/>
+            </ThemeIcon>
             <Text weight={500} style={{ flex: 1 }} mr={widthSmallerThan700 ? 16 : 0}>
               View submitted images to get a feel for the area
             </Text>

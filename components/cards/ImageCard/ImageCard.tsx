@@ -19,7 +19,7 @@ const ImageCard = ({ image, icon, title, body, className }: Props) => {
 
       <Group position="apart" mt="md" mb="xs">
         <Text weight={500}>{title}</Text>
-        <ThemeIcon children={icon} size='xl' variant="light"/>
+        <ThemeIcon size='xl' variant="light">{icon}</ThemeIcon>
       </Group>
 
       <Text size="sm" color="dimmed">
