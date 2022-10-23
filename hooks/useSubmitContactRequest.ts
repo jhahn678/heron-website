@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
-const { NEXT_PUBLIC_CONTACT_URL } = process.env;
 
 interface ContactRequest {
     name: string,
@@ -81,7 +80,7 @@ export const useSubmitContactRequest = ({
         if(!valid) return;
         try{
             setLoading(true)
-            const res = await axios.post(NEXT_PUBLIC_CONTACT_URL!, {
+            const res = await axios.post(process.env.NEXT_PUBLIC_CONTACT_URL!, {
                 name, email, reference, body
             })
             reset()
