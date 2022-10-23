@@ -343,6 +343,9 @@
   }
   .iconCardRowText{
     font-size: 14px;
-    
+  }
+  .header {
+    margin-left: 24px;
+    margin-right: 24px;
   }
 }
