@@ -160,17 +160,18 @@ const Home: NextPage = () => {
         <div className={styles.sectionTwoTitle}>
             <Title 
               order={1} 
-              size={widthSmallerThan1000 ? 48 : 64} 
+              size={64} 
               variant='gradient' 
               gradient={widthLargerThan1200 ? 
                 { from: 'primary.0', to: 'primary.3', deg: 170 } :
-                { from: 'primary.5', to: 'primary.7', deg: 170 }
+                { from: 'primary.0', to: 'primary.3', deg: 170 }
               }
             >
               319,405
             </Title>
             <Title 
               order={1} 
+              color={widthLargerThan1200 ? 'black' : '#f5f5f5'}
               align={widthSmallerThan1000 ? 'center': 'left'}
               size={widthSmallerThan1000 ? 48 : 64}
               ml={widthSmallerThan1000 ? 0 : 32}
@@ -193,7 +194,6 @@ const Home: NextPage = () => {
           </div>
           <div className={styles.sectionTwoCol}>
             <Title 
-              order={widthLargerThan1200 ? 1 : 2}
               align={widthSmallerThan1000 ? 'center' : 'left'}
             >See what other fishermen think</Title>
             <div className={styles.iconCardRow}>
@@ -274,7 +274,6 @@ const Home: NextPage = () => {
         <div className={styles.sectionFourRight}>
           <Title 
             order={1} 
-            mt={widthLargerThan1200 ? 0 : 24}
             size={widthSmallerThan700 ? 32 : 48}
             align={widthSmallerThan700 ? 'center' : 'left'}
           >Map Your Favorite Spots</Title>
