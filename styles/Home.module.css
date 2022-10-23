@@ -247,8 +247,7 @@
     height: unset;
     padding-top: 5vh;
     padding-bottom: 10vh;
-    filter: drop-shadow(0px -2px 12px rgba(50, 50, 50, .2));
-      background: linear-gradient(150deg, #00668b 15%, #c6e5f8 100%);
+    background: linear-gradient(20deg, rgba(255, 255, 255, 1) 0%, #E5F8FF 100%);
   }
   .sectionTwoTitle {
     margin: 5vh 5vw 0 5vw;

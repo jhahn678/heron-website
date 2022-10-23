@@ -164,14 +164,13 @@ const Home: NextPage = () => {
               variant='gradient' 
               gradient={widthLargerThan1200 ? 
                 { from: 'primary.0', to: 'primary.3', deg: 170 } :
-                { from: 'primary.0', to: 'primary.3', deg: 170 }
+                { from: 'secondaryContainer.3', to: 'primary' }
               }
             >
               319,405
             </Title>
             <Title 
               order={1} 
-              color={widthLargerThan1200 ? 'black' : '#f5f5f5'}
               align={widthSmallerThan1000 ? 'center': 'left'}
               size={widthSmallerThan1000 ? 48 : 64}
               ml={widthSmallerThan1000 ? 0 : 32}
