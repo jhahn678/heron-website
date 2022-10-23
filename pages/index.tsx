@@ -339,21 +339,21 @@ const Home: NextPage = () => {
           >Need to get in contact?</Title>
           <Title 
             order={2} 
-            mt={12}
+            mt={16}
             align={widthLargerThan1200 ? 'left' : 'center'}
           >Submit a message to contact us for the following</Title>
-          <List withPadding size={20} pt={24} style={{ fontWeight: '500'}}>
-            <List.Item icon={
+          <List withPadding size={20} style={{ fontWeight: '500'}}>
+            <List.Item pt={24} icon={
               <ThemeIcon color="primary.7" size={24} radius="xl">
                 <IoChevronForwardCircleOutline size={16}/>
               </ThemeIcon>
             }>Report an in-app problem</List.Item>
-            <List.Item icon={
+            <List.Item pt={16} icon={
               <ThemeIcon color="primary.7" size={24} radius="xl">
                 <IoChevronForwardCircleOutline size={16}/>
               </ThemeIcon>
             }>Request assistance with your account</List.Item>
-            <List.Item icon={
+            <List.Item pt={16} icon={
               <ThemeIcon color="primary.7" size={24} radius="xl">
                 <IoChevronForwardCircleOutline size={16}/>
               </ThemeIcon>
