@@ -12,7 +12,8 @@ import {
   IoFishOutline, 
   IoStarOutline, 
   IoPeople, 
-  IoImages } from 'react-icons/io5'
+  IoImages, 
+  IoChevronForwardCircleOutline} from 'react-icons/io5'
 import { FaGithub, } from 'react-icons/fa'
 import { BsChevronDoubleDown } from 'react-icons/bs'
 import { motion } from 'framer-motion'
@@ -342,9 +343,21 @@ const Home: NextPage = () => {
             align={widthLargerThan1200 ? 'left' : 'center'}
           >Submit a message to contact us for the following</Title>
           <List withPadding size={20} pt={24} style={{ fontWeight: '500'}}>
-            <List.Item>Report an in-app problem</List.Item>
-            <List.Item>Request assistance with your account</List.Item>
-            <List.Item>General questions not addressed in FAQ</List.Item>
+            <List.Item icon={
+              <ThemeIcon color="primary.7" size={24} radius="xl">
+                <IoChevronForwardCircleOutline size={16}/>
+              </ThemeIcon>
+            }>Report an in-app problem</List.Item>
+            <List.Item icon={
+              <ThemeIcon color="primary.7" size={24} radius="xl">
+                <IoChevronForwardCircleOutline size={16}/>
+              </ThemeIcon>
+            }>Request assistance with your account</List.Item>
+            <List.Item icon={
+              <ThemeIcon color="primary.7" size={24} radius="xl">
+                <IoChevronForwardCircleOutline size={16}/>
+              </ThemeIcon>
+            }>General questions not addressed in FAQ</List.Item>
           </List>
         </div>
         <div className={styles.contactSectionRight}>
