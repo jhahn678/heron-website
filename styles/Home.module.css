@@ -239,6 +239,7 @@
   .sectionOne{
     justify-content: center;
     padding: 32px;
+    background: linear-gradient(150deg, rgba(255, 255, 255, 1) 0%, #E5F8FF 100%);
   }
   .sectionOneLeft{
     align-items: center;
