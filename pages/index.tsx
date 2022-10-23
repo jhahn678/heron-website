@@ -10,11 +10,10 @@ import {
   IoCreateOutline, 
   IoMapOutline, 
   IoFishOutline, 
-  IoStarOutline, 
-  IoPeople, 
-  IoImages, 
   IoChevronForwardCircleOutline} from 'react-icons/io5'
+import { IoMdImages, IoIosPeople } from 'react-icons/io'
 import { FaGithub, } from 'react-icons/fa'
+import { MdOutlineRateReview } from 'react-icons/md'
 import { BsChevronDoubleDown } from 'react-icons/bs'
 import { motion } from 'framer-motion'
 import { MouseEventHandler, useState } from 'react'
@@ -163,7 +162,10 @@ const Home: NextPage = () => {
               order={1} 
               size={widthSmallerThan1000 ? 48 : 64} 
               variant='gradient' 
-              gradient={{ from: 'primary.0', to: 'primary.3', deg: 170 }}
+              gradient={widthLargerThan1200 ? 
+                { from: 'primary.0', to: 'primary.3', deg: 170 } :
+                { from: 'primary.5', to: 'primary.7', deg: 170 }
+              }
             >
               319,405
             </Title>
@@ -195,14 +197,14 @@ const Home: NextPage = () => {
               align={widthSmallerThan1000 ? 'center' : 'left'}
             >See what other fishermen think</Title>
             <div className={styles.iconCardRow}>
-              <IconCard icon={<IoStarOutline size={32}/>} size={100}/>
+              <IconCard icon={<MdOutlineRateReview size={32} color={'#fff'}/>} size={100}/>
               <Text className={styles.iconCardRowText}>
                 Read the latest fishery reviews to gain insight before your visit. 
                 Afterwards, leave your own review to let others know how it went.
               </Text>
             </div>
             <div className={styles.iconCardRow}>
-              <IconCard icon={<IoFishOutline size={32}/>} size={100}/>
+              <IconCard icon={<IoFishOutline size={32} color={'#fff'}/>} size={100}/>
               <Text className={styles.iconCardRowText}>
                 Find out what others are catching. 
                 Open up the map and view catch locations. 
@@ -210,7 +212,7 @@ const Home: NextPage = () => {
               </Text>
             </div>
             <div className={styles.iconCardRow}>
-              <IconCard icon={<IoMapOutline size={32}/>} size={100}/>
+              <IconCard icon={<IoMapOutline size={32} color={'#fff'}/>} size={100}/>
               <Text className={styles.iconCardRowText}>
                 Find access points and discover top locations for each fishery.
                 Save your own locations and share them with others, or keep them private.
@@ -279,8 +281,8 @@ const Home: NextPage = () => {
           <div className='frac' style={{ marginTop: 40 }}>
             <ThemeIcon  
               size={52} variant="gradient" mr={24}
-              ml={widthSmallerThan700 ? 16 : 0}
-              gradient={{ to: 'primary', from: 'secondaryContainer.3' }}
+              ml={widthSmallerThan700 ? 16 : 0} radius={8}
+              gradient={{ from: 'primary.5', to: 'primary.8', deg: 170 }}
             >
               <GiBoatFishing size={24}/>
             </ThemeIcon>
@@ -291,10 +293,10 @@ const Home: NextPage = () => {
           <div className='frac' style={{ marginTop: 24 }}>
             <ThemeIcon  
               size={52} variant="gradient" mr={24}
-              ml={widthSmallerThan700 ? 16 : 0}
-              gradient={{ to: 'primary', from: 'secondaryContainer.3' }}
+              ml={widthSmallerThan700 ? 16 : 0} radius={8}
+              gradient={{ from: 'primary.5', to: 'primary.7', deg: 170 }}
             >
-              <IoPeople size={24}/>
+              <IoIosPeople size={24}/>
             </ThemeIcon>
             <Text weight={500} style={{ flex: 1 }} mr={widthSmallerThan700 ? 16 : 0}>
               Share spots with the community and friends
@@ -303,8 +305,8 @@ const Home: NextPage = () => {
           <div className='frac' style={{ marginTop: 24 }}>
             <ThemeIcon  
               size={52} variant="gradient" mr={24}
-              ml={widthSmallerThan700 ? 16 : 0}
-              gradient={{ to: 'primary', from: 'secondaryContainer.3' }}
+              ml={widthSmallerThan700 ? 16 : 0} radius={8}
+              gradient={{ from: 'primary.5', to: 'primary.7', deg: 170 }}
             >
               <CgNotes size={24} color={'white'}/>
             </ThemeIcon>
@@ -315,10 +317,10 @@ const Home: NextPage = () => {
           <div className='frac' style={{ marginTop: 24 }}>
             <ThemeIcon  
               size={52} variant="gradient" mr={24}
-              ml={widthSmallerThan700 ? 16 : 0}
-              gradient={{ to: 'primary', from: 'secondaryContainer.3' }}
+              ml={widthSmallerThan700 ? 16 : 0} radius={8}
+              gradient={{ from: 'primary.5', to: 'primary.7', deg: 170 }}
             >
-              <IoImages size={24}/>
+              <IoMdImages size={24}/>
             </ThemeIcon>
             <Text weight={500} style={{ flex: 1 }} mr={widthSmallerThan700 ? 16 : 0}>
               View submitted images to get a feel for the area
