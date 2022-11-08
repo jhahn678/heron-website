@@ -127,7 +127,9 @@ const Home: NextPage = () => {
           <div className={styles.appStoreIcons}>
             <Image src={AppStore} width={150} height={100} alt={'Download on Apple App Store'}/>
             <div style={{ width: 24 }}/>
-            <Image src={PlayStore} width={150} height={100} alt={'Download on Google Play Store'}/>
+            <a href={'https://play.google.com/store/apps/details?id=com.jhahn678.heron'} target={'_blank'} rel='noreferrer'>
+              <Image src={PlayStore} width={150} height={100} alt={'Download on Google Play Store'}/>
+            </a>
           </div>
         </div>
         { widthLargerThan1200 &&
@@ -423,7 +425,9 @@ const Home: NextPage = () => {
           </motion.a>
           <Group>
               <Image src={AppStore} height={54} width={86} alt={'Download on Apple App Store'}/>
-              <Image src={PlayStore} height={54} width={98} alt={'Download on Google Play Store'}/>
+              <a href={'https://play.google.com/store/apps/details?id=com.jhahn678.heron'} target={'_blank'} rel='noreferrer'>
+                <Image src={PlayStore} height={54} width={98} alt={'Download on Google Play Store'}/>
+              </a>
             </Group>
         </div>
       </footer>
