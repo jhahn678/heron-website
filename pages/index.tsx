@@ -1,4 +1,4 @@
-import { Title, Text, Card, ThemeIcon, TextInput, Textarea, Select, Button, List, Group, Stack } from '@mantine/core'
+import { Title, Text, Card, ThemeIcon, TextInput, Textarea, Select, Button, List, Group, Stack, Modal } from '@mantine/core'
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
@@ -32,6 +32,9 @@ const Home: NextPage = () => {
   const handleChevronDownClick: MouseEventHandler<HTMLDivElement> = (e) => {
     window.scroll({ top: window.innerHeight, behavior: 'smooth' })
   }
+
+  const [iosModalVisible, setIosModalVisible] = useState(false)
+  const handleIosModal = () => setIosModalVisible(x => !x) 
 
   const widthLargerThan1200 = useMediaQuery('(min-width: 1200px)');
   const widthSmallerThan1000 = useMediaQuery('(max-width: 1000px)');
@@ -81,6 +84,10 @@ const Home: NextPage = () => {
         <meta name="description" content="Heron Mobile" />
       </Head>
 
+      <Modal opened={iosModalVisible} onClose={handleIosModal} title={'Coming Soon'} styles={{ title: { fontWeight: 600 }}}>
+        <p>The iOS app is almost finished! Check back in a few days and it should be available for download.</p>
+        <Button onClick={handleIosModal}>Dismiss</Button>
+      </Modal>
 
       <header className={styles.header}>
         <div className='frac'>
@@ -125,10 +132,9 @@ const Home: NextPage = () => {
             size={widthSmallerThan700 ? 20 : 36}
           >Download the Heron app today.</Title> 
           <div className={styles.appStoreIcons}>
-            <Image src={AppStore} width={150} height={100} alt={'Download on Apple App Store'}/>
-            <div style={{ width: 24 }}/>
+            <Image src={AppStore} width={138} height={45} alt={'Download on Apple App Store'} onClick={handleIosModal}/>
             <a href={'https://play.google.com/store/apps/details?id=com.jhahn678.heron'} target={'_blank'} rel='noreferrer'>
-              <Image src={PlayStore} width={150} height={100} alt={'Download on Google Play Store'}/>
+              <Image src={PlayStore} width={152} height={45} alt={'Download on Google Play Store'}/>
             </a>
           </div>
         </div>
