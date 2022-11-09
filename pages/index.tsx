@@ -430,7 +430,7 @@ const Home: NextPage = () => {
             </Group>
           </motion.a>
           <Group>
-              <Image src={AppStore} height={54} width={86} alt={'Download on Apple App Store'}/>
+              <Image src={AppStore} height={54} width={86} alt={'Download on Apple App Store'} onClick={handleIosModal}/>
               <a href={'https://play.google.com/store/apps/details?id=com.jhahn678.heron'} target={'_blank'} rel='noreferrer'>
                 <Image src={PlayStore} height={54} width={98} alt={'Download on Google Play Store'}/>
               </a>
